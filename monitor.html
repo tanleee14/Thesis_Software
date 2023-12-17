@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Live Camera Feed</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(78, 148, 79);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        nav a {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+
+        #main-content {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        #camera-container {
+            width: 50%;
+            box-sizing: border-box;
+            padding-right: 20px;
+        }
+
+        #waste-quantities {
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="/admin/index.html">Admin</a>
+        <a href="#">About Us</a>
+    </nav>
+
+    <div id="main-content">
+        <div id="camera-container">
+            <h1>Live Camera Feed</h1>
+            <video id="live-camera" autoplay></video>
+        </div>
+
+        <div id="waste-quantities">
+            <h2>Waste Quantities</h2>
+            <table>
+                <tr>
+                    <th>Waste Type</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Plastic</td>
+                    <td id="plastic-quantity">0</td>
+                </tr>
+                <tr>
+                    <td>Paper</td>
+                    <td id="paper-quantity">0</td>
+                </tr>
+                <tr>
+                    <td>Metal</td>
+                    <td id="metal-quantity">0</td>
+                </tr>
+                <tr>
+                    <td>Hazardous</td>
+                    <td id="hazardous-quantity">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

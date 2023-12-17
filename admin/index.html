@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/monitor.html">Monitoring</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard">
+            <div class="card paper">
+                <h2>Paper</h2>
+                <p>Count: <span id="paperCount">0</span></p>
+            </div>
+            <div class="card plastic">
+                <h2>Plastic</h2>
+                <p>Count: <span id="plasticCount">0</span></p>
+            </div>
+            <div class="card metal">
+                <h2>Metal</h2>
+                <p>Count: <span id="metalCount">0</span></p>
+            </div>
+            <div class="card hazardous">
+                <h2>Hazardous</h2>
+                <p>Count: <span id="hazardousCount">0</span></p>
+            </div>
+        </div>
+        <div id="chart-wrapper">
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

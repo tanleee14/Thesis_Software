@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 50px auto;
+    overflow: hidden; /* Clearfix to contain floated elements */
+}
+
+.column {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.column h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.column img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
